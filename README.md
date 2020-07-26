@@ -1,4 +1,4 @@
-# Basic-Python-by-Anld
+# Basic Python by Anld
 Python document by Latex
 
 Please do not reup or use it for economics.
