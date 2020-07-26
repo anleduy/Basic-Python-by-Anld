@@ -1,0 +1,92 @@
+\subsection{Switch - case}
+Python không có cấu trúc switch case đơn giản. Thay vào đó, chúng ta có thể sử dụng một dictionary để ánh xạ đến các case.\par
+Cấu trúc một dictionary:\par
+\texttt{<name of dictionary> = \{}\par
+\qquad \texttt{<key 1>: <value 1>,}\par
+\qquad \texttt{[<key 2>: <value 2>,]}\par
+\qquad \texttt{[<key 3>: <value 3>,]}\par
+\qquad \texttt{[...]}\par
+\texttt{\}}\par
+Ta sử dụng hàm \texttt{get(<key>, <value if key not found>)} để lấy value từ một key đã biết trước.
+\newpage
+\textbf{Ví dụ:} Chương trình nhập vào tháng dạng số nguyên, xuất ra tên tháng:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{red}{def} get\_month\_by\_number(month):}\par
+	\qquad \texttt{switch = \{}\par
+	\qquad \qquad \texttt{1: 'January',}\par
+	\qquad \qquad \texttt{2: 'February',}\par
+	\qquad \qquad \texttt{3: 'March',}\par
+	\qquad \qquad \texttt{4: 'April',}\par
+	\qquad \qquad \texttt{5: 'May',}\par
+	\qquad \qquad \texttt{6: 'June',}\par
+	\qquad \qquad \texttt{7: 'July',}\par
+	\qquad \qquad \texttt{8: 'August',}\par
+	\qquad \qquad \texttt{9: 'September',}\par
+	\qquad \qquad \texttt{10: 'October',}\par
+	\qquad \qquad \texttt{11: 'November',}\par
+	\qquad \qquad \texttt{12: 'December'}\par
+	\qquad \texttt{\}}\par
+	\qquad \texttt{\textcolor{red}{return}  switch.get(month, 'Month must be less than 13 and greater than 0.')}\par
+	\bigskip
+	\texttt{month = \textcolor{red}{int}(\textcolor{blue}{input}("Type your month: "))}\par
+	\texttt{\textcolor{blue}{print}(get\_month\_by\_number(month))}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Type your month: 8}\par
+	\texttt{August}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\textbf{Ví dụ:} Chương trình nhập vào tháng dạng số nguyên, xuất số ngày trong tháng:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{red}{def} get\_month\_by\_number(month):}\par
+	\qquad \texttt{switch = \{}\par
+	\qquad \qquad \texttt{1: 'January', 2: 'February', 3: 'March', 4: 'April', }\par
+	\qquad \qquad \texttt{5: 'May', 6: 'June', 7: 'July', 8: 'August', }\par
+	\qquad \qquad \texttt{9: 'September', 10: 'October', 11: 'November', 12: 'December'}\par
+	\qquad \texttt{\}}\par
+	\medskip
+	\texttt{\textcolor{red}{def} get\_day\_of\_february():}\par
+	\qquad \texttt{year = \textcolor{red}{int}(\textcolor{blue}{input}("Type a year: "))}\par
+	\qquad \texttt{\textcolor{red}{if} year \% 400 == 0 or (year \% 4 == 0 and year \% 100 != 0):}\par
+	\qquad \qquad \texttt{return 29}\par
+	\qquad \texttt{return 28}\par
+	\medskip
+	\texttt{\textcolor{red}{def} get\_day\_of\_month(month):}\par
+	\qquad \texttt{switch = \{}\par
+	\qquad \qquad \texttt{1: 31, 2: get\_day\_of\_february(),}\par
+	\qquad \qquad \texttt{3: 31, 4: 30,}\par
+	\qquad \qquad \texttt{5: 31, 6: 30,}\par
+	\qquad \qquad \texttt{7: 31, 8: 31,}\par
+	\qquad \qquad \texttt{9: 30, 10: 31,}\par
+	\qquad \qquad \texttt{11: 30, 12: 31}\par
+	\qquad \texttt{\}}\par
+	\qquad \texttt{\textcolor{red}{return}  switch.get(month, 'Month must be less than 13 and greater than 0.')}\par
+	\medskip
+	\texttt{month = \textcolor{red}{int}(\textcolor{blue}{input}("Type a month: "))}\par
+	\texttt{\textcolor{blue}{print}(get\_month\_by\_number(month), 'has', get\_day\_of\_month(month), 'days.')}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Type a month: 2}\par
+	\texttt{Type a year: 2003}\par
+	\texttt{February has 28 days.}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+
+
+

@@ -1,0 +1,59 @@
+\section{Chú thích}
+\subsection{Chú thích}
+Chú thích trong Python là một công cụ thiết yếu cho lập trình viên, giúp giải thích, mô tả chức năng của một đoạn code nào đó.\par
+Trong các ngôn ngữ lập trình khác như Java hoặc C++ cung cấp kí hiệu // cho chú thích trên một dòng và cặp kí tự /* */ cho nhiều dòng. Tuy nhiên, Python cung cấp kí hiệu \# cho chú thích trên một dòng.\par
+\textbf{Ví dụ:} Hàm kiểm tra một số nguyên có phải là số nguyên tố hay không:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{red}{import} math}\par
+	\smallskip
+	\texttt{\textcolor{red}{def} is\_prime\_number(n):}\par
+	\qquad\texttt{\# input: a integer number}\par
+	\qquad\texttt{\# output: if n is a prime number, return True. If not, return False.}\par
+	\smallskip
+	\qquad\texttt{\# if n = 1 or n < 0, n isn't a prime number}\par
+	\qquad\texttt{\textcolor{red}{if} n < 1:}\par
+	\qquad\qquad\texttt{\textcolor{red}{return} False}\par
+	\qquad\texttt{\# if n = 2 or n = 3, n is a prime number}\par
+	\qquad\texttt{\textcolor{red}{if} n < 4:}\par
+	\qquad\qquad\texttt{\textcolor{red}{return} True}\par
+	\qquad\texttt{\# if n >= 4, use this function to check}\par
+	\qquad\texttt{\textcolor{red}{for} i \textcolor{red}{in} range(2, int(math.sqrt(n)) + 1):}\par
+	\qquad\qquad\texttt{\textcolor{red}{if} n \% i == 0:}\par
+	\qquad\qquad\qquad\texttt{\textcolor{red}{return} False}\par
+	\qquad\texttt{\# if n isn't multiples of i in [2, sqrt(n)], n is a prime number}\par	
+	\qquad\texttt{\textcolor{red}{return} True}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+\newpage
+\subsection{Docstrings}
+Ngoài cách chú thích sử dụng kí hiệu \#, Python hỗ trợ thêm một kiểu chú thích khác là docstrings. Docstring được dùng nhiều trong các module, hàm, lớp hoặc phương thức. Trong docstring, lập trình viên có thể mô tả chức năng của hàm, lớp, phương thức bằng cách để phần mô tả trong cặp dấu """.\par
+Sử dụng hàm \texttt{\_\_doc\_\_} để in ra docstrings của một hàm. Docstrings phải được định nghĩa ở vị trí đầu tiên sau tên hàm / lớp. Nếu nằm ở vị trí khác, nó sẽ không được lưu vào hàm \texttt{\_\_doc\_\_}.\par
+\textbf{Ví dụ:} Hàm in ra dòng chữ "Hello world!":\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{red}{def} hello\_world():}\par
+	\qquad\texttt{"""}\par
+	\qquad\texttt{This function prints "Hello world!"}\par
+	\qquad\texttt{"""}\par
+	\qquad\texttt{\textcolor{blue}{print}("Hello world!")}\par
+	\medskip
+	\texttt{hello\_world()}\par
+	\texttt{\textcolor{blue}{print}(hello\_world.\_\_doc\_\_)}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Hello world!}\par
+	\texttt{}\par
+	\qquad\texttt{This function prints "Hello world!"}\par
+	\texttt{}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}
+\resetlinenumber
+\newpage

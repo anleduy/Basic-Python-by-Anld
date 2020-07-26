@@ -1,0 +1,85 @@
+\section{Nhập, xuất dữ liệu}
+Sử dụng lệnh \texttt{print(<string>)} để in chuỗi ra ngoài màn hình.\par
+\textbf{Ví dụ:} Chương trình Hello World!\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{blue}{print}("Hello World!")}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Hello World!}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}
+\resetlinenumber
+\newpage
+Sử dụng hàm \texttt{input()} để đưa dữ liệu từ bàn phím vào trong Python, cú pháp:
+\begin{center}
+	\texttt{<variable\_name> = input([<output\_string>])}
+\end{center}
+\textbf{Ví dụ:} Chương trình nhập vào tên người dùng, in ra kết quả \texttt{“Hello + tên người dùng”}:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{userName = \textcolor{blue}{input}("Type your name here: ")}\par
+	\texttt{\textcolor{blue}{print}("Hello " + userName)}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Type your name here: An}\par
+	\texttt{Hello An}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+Mặc định dữ liệu đưa vào khi sử dụng hàm \texttt{input()} là một chuỗi:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{a = \textcolor{blue}{input}("a = ")}\par
+	\texttt{b = \textcolor{blue}{input}("b = ")}\par
+	\texttt{\textcolor{blue}{print}('a is',type(a), 'format')}\par
+	\texttt{\textcolor{blue}{print}('b is',type(b), 'format')}\par
+	\texttt{c = a + b}\par
+	\texttt{\textcolor{blue}{print}('a + b = ', c)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{a = 15}\par
+	\texttt{b = 36}\par
+	\texttt{a is <class 'str'> format}\par
+	\texttt{b is <class 'str'> format}\par
+	\texttt{a + b =  1536}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+Khi nhập vào một số, để thuận tiện cho việc tính toán, ta phải ép kiểu chuỗi về số.\par
+\noindent
+\textbf{Ví dụ:} Chương trình nhập vào năm sinh người dùng, trả về tuổi của người đó tính đến năm 2020:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{year = \textcolor{red}{int}(\textcolor{blue}{print}("Type your year of birth here: "))}\par
+	\texttt{age = 2020 - year}\par
+	\texttt{\textcolor{blue}{print}("Your age is: \%d" \% age)}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Type your year of birth here: 1999}\par
+	\texttt{Your age is: 21}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage

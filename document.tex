@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[top=2cm, bottom=2cm, left = 3cm, right = 2cm]{geometry}
+\usepackage[unicode]{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+\setlength{\parskip}{6pt}
+\usepackage{xcolor}
+\usepackage{lineno}
+\usepackage{array}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\usepackage[labelfont=bf]{caption}
+\title{Lập trình Python cơ bản}
+\author{An Duy Le}
+\date{Tháng 6, 2020}
+\begin{document}
+	\pagenumbering{gobble}
+	\maketitle
+	\newpage
+	\begin{center}
+		\tableofcontents
+	\end{center}
+	\newpage
+	\pagenumbering{arabic}
+	\setcounter{page}{4}
+	\input{sub/var}
+	\input{sub/literals}
+	\input{sub/keyword}
+	\input{sub/comment}
+	\input{sub/operators}
+	\input{sub/io}
+	\input{sub/condition}
+	\input{sub/loop}
+	\input{sub/exception}
+\end{document}

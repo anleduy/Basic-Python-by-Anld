@@ -1,0 +1,187 @@
+\section{Các kiểu dữ liệu}
+\subsection{Kiểu chuỗi}
+Người lập trình có thể tạo ra một chuỗi bằng cách đặt nội dung vào dấu ngoặc đơn hoặc ngoặc kép.\par
+\noindent
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+	\texttt{"Hello", 'world!'}\\
+\rule{\linewidth}{0.2mm}\par
+\noindent
+Ngoài chuỗi trên cùng một hàng, Python hỗ trợ hai cách khởi tạo chuỗi có nội dung trên nhiều hàng:\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{str1 = 'Hello '$\backslash$}\par
+	\qquad\texttt{'World!'}\par
+	\texttt{str2 = """Hello}\par
+	\texttt{World!}\par
+	\texttt{"""}\par
+	\texttt{\textcolor{blue}{print}(str1)}\par
+	\texttt{\textcolor{blue}{print}()}\par
+	\texttt{\textcolor{blue}{print}(str2)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{Hello World!}\par
+	\texttt{}\par
+	\texttt{Hello}\par
+	\texttt{World!}
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\subsection{Kiểu số}
+Tương tự như các ngôn ngữ lập trình khác, Python cũng có kiểu số nguyên và số thực. Ngoài ra, trong Python hỗ trợ thêm cho các lập trình viên kiểu số phức. Số nhị phân, bát phân, thập lục phân cũng được khai báo một cách dễ dàng.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{a = 0b10100  \# Binary Literals}\par
+	\texttt{b = 100  \# Decimal Literal}\par
+	\texttt{c = 0o215  \# Octal Literal}\par
+	\texttt{d = 0x12d  \# Hexadecimal Literal}\par
+	\texttt{f = 100.5}\par
+	\texttt{z = 2 + 3j}\par
+	\texttt{\textcolor{blue}{print}(a, b, c, d)}\par
+	\texttt{\textcolor{blue}{print}(f)}\par
+	\texttt{\textcolor{blue}{print}(z, z.real, z.imag)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{20 100 141 301}\par
+	\texttt{100.5}\par
+	\texttt{(2+3j) 2.0 3.0}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\subsection{Kiểu logic}
+Kiểu logic chứa một trong hai giá trị là \texttt{True} và \texttt{False}. Trong kiểu Boolean, giá trị \texttt{True} được hiểu là 1, giá trị \texttt{False} được hiểu là 0.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\textcolor{blue}{print}(\textcolor{red}{True} + 10)}\par
+	\texttt{\textcolor{blue}{print}(\textcolor{red}{False} + 10)}\par
+	\texttt{\textcolor{blue}{print}(\textcolor{red}{True} == 2)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{11}\par
+	\texttt{10}\par
+	\texttt{False}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\subsection{Kiểu None}
+Kiểu \texttt{None} là một kiểu đặc biệt trong Python, dùng để ám chỉ một biến chưa được khởi tạo hoặc làm giá trị kết thúc của list.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{val1, val2 = 10, None}\par
+	\texttt{\textcolor{blue}{print}(val1, val2)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{10 None}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\subsection{Các collections}
+Python cung cấp 4 loại collection: List, Tuple, Dict và Set.
+\subsubsection{List}
+List có thể chứa nhiều phần tử có kiểu dữ liệu khác nhau. List có thể thay đổi, sửa đổi các phần tử bên trong được. Các giá trị trong list phân tách nhau bởi dấu phẩy và được đặt trong cặp dấu ngoặc vuông.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{ls = [1, 3, 5, 'Python']}\par
+	\texttt{\textcolor{blue}{print}(ls)}\par
+	\texttt{ls[0] = 2}\par
+	\texttt{\textcolor{blue}{print}(ls)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{[1, 3, 5, 'Python']}\par
+	\texttt{[2, 3, 5, 'Python']}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\subsubsection{Tuple}
+Tương tự như list, Tuple có thể chứa nhiều phần tử có kiểu dữ liệu khác nhau. Tuy nhiên, Tuple là kiểu dữ liệu immutable (không thể thay đổi các phần tử sau khi khởi tạo). Các giá trị trong Tuple phân cách nhau bởi dấu phẩy và được đặt trong cặp dấu ngoặc tròn.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{tpl = (1, 3, [2, "Py"])}\par
+	\texttt{\textcolor{blue}{print}(tpl)}\par
+	\texttt{tpl[1] = 2}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{TypeError: 'tuple' object does not support item assignment}\par
+	\texttt{(1, 3, [2, 'Py'])}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage
+\subsubsection{Dictionary}
+Dictionary lưu trữ dữ liệu bằng từng cặp key - value. Các giá trị trong Dict phân cách nhau bởi dấu phẩy và được đặt trong cặp dấu ngoặc nhọn. Cặp key - value phân cách nhau bởi dấu hai chấm.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{dct = \{'Name': 'An', 'Age': 21, 'School': 'ACT'\}}\par
+	\texttt{\textcolor{blue}{print}(dct)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\{'Name': 'An', 'Age': 21, 'School': 'ACT'\}}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\subsubsection{Set}
+Set lưu trữ các giá trị không theo thứ tự. Các giá trị trong Set phân cách nhau bởi dấu phẩy và được đặt trong cặp dấu ngoặc nhọn.\par
+Tương tự như List và Tuple, một Set cũng có thể lưu được nhiều kiểu dữ liệu khác nhau, tuy nhiên, Set không chấp nhận phần tử có kiểu dữ liệu là List.\par
+\textbf{Ví dụ:}\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{st = \{"C++", "Java", "Python", "Scala", "Ruby", 1\}}\par
+	\texttt{\textcolor{blue}{print}(st)}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\noindent
+\resetlinenumber
+Kết quả cho ra ở Console:\\
+\rule{\linewidth}{0.2mm}\par
+\begin{linenumbers}
+	\texttt{\{1, 'Ruby', 'Python', 'Scala', 'C++', 'Java'\}}\par
+\end{linenumbers}
+\rule{\linewidth}{0.2mm}\par
+\resetlinenumber
+\newpage

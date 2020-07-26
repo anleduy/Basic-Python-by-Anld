@@ -1,0 +1,169 @@
+\section{Toán tử}
+Toán tử có thể được định nghĩa là ký hiệu chịu trách nhiệm cho một hoạt động, phép tính cụ thể giữa hai toán hạng. Python cung cấp một loạt các toán tử như sau:
+\begin{itemize}
+	\itemsep\setlength{0em}
+	\item Toán tử số học
+	\item Toán tử so sánh
+	\item Toán tử gán
+	\item Toán tử logic
+	\item Toán tử biwter
+	\item Toán tử khai thác
+	\item Toán tử xác thực
+\end{itemize}
+\subsection{Toán tử số học}
+Tương tự như Java và C, trong Python cung cấp các toán tử số học để tính toán trên các toán hạng, ngoài ra bổ sung thêm các toán tử mới.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		+ & Phép cộng giữa hai toán hạng & a = 10, b = 2, c = a + b (c = 12) \\
+		\hline
+		- & Phép trừ giữa hai toán hạng & a = 10, b = 2, c = a - b (c = 8) \\
+		\hline
+		* & Phép nhân giữa hai toán hạng & a = 10, b = 2, c = a * b (c = 20) \\
+		\hline
+		/ & Phép chia giữa hai toán hạng & a = 10, b = 2, c = a / b (c = 5)  \\
+		\hline
+		// & Phép chia làm tròn xuống & a = 10, b = 3, c = a // b (c = 3) \\
+		\hline
+		** & Phép luỹ thừa & a = 10, b = 2, c = a ** b (c = 100) \\
+		\hline
+		\% & Phép chia lấy dư & a = 10, b = 3, c = a \% b (c = 1) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử số học}
+\end{table}
+\subsection{Toán tử so sánh}
+Toán tử so sánh dùng để so sánh giá trị của các toán hạng, kết quả trả về \texttt{True} nếu đúng và \texttt{False} nếu sai.\par
+Bảng dưới đây mô tả các toán tử so sánh với a = 5, b = 2.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		== & So sánh bằng  & a == b (False) \\
+		\hline
+		!= & So sánh khác & a != b (True) \\
+		\hline
+		> & So sánh lớn hơn & a > b (True) \\
+		\hline
+		>= & So sánh lớn hơn hoặc bằng & a >= b (True) \\
+		\hline
+		< & So sánh bé hơn & a < b (False) \\
+		\hline
+		<= & So sánh bé hơn hoặc bằng & a <= b (False) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử so sánh}
+\end{table}
+\newpage
+\subsection{Toán tử gán}
+Toán tử gán là toán tử dùng đế gán giá trị của một đối tượng cho một đối tượng khác. Trong Python, nó cũng được thể hiện giống như các ngôn ngữ khác.\par
+Bảng dưới đây mô tả các toán tử gán với a = 5, b = 2.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		= & Gán giá trị của toán hạng này cho toán hạng khác & a = b (a = 2) \\
+		\hline
+		+= & Cộng toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a += b (a = 7) \\
+		\hline
+		-= & Trừ toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a -= b (a = 3) \\
+		\hline
+		*= & Nhân toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a *= b (a = 10) \\
+		\hline
+		/= & Chia toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a /= b (a = 2.5) \\
+		\hline
+		\%= & Chia lấy dư toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a \%= b (a = 1) \\
+		\hline
+		**= & Luỹ thừa toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a **= b (a = 25) \\
+		\hline
+		//= & Chia làm tròn xuống toán hạng này cho toán hạng kia rồi gán lại cho chính nó & a //= b (a = 2) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử gán}
+\end{table}
+\subsection{Toán tử logic}
+\label{logic}
+Tương tự các ngôn ngữ khác, trong Python có 3 loại toán tử logic: \texttt{and}, \texttt{or}, \texttt{not}.\par
+Bảng dưới đây mô tả các toán tử logic trong Python, với a = \texttt{True}, b = \texttt{False}.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		and & Nếu cả hai vế của toán tử đều là True thì kết quả là True, ngược lại là False & a and b (False) \\
+		\hline
+		or  & Nếu một trong hai vế của toán tử là True thì kết quả là True, ngược lại là False & a or b (True) \\
+		\hline
+		not & Nếu toán tử là True thì kết quả là False, ngược lại là True & not a (False) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử logic}
+\end{table}
+\subsection{Toán tử biwter}
+Toán tử biwter thực hiện trên các bit nhị phân của các giá trị.\par
+Bảng dưới đây mô tả các toán tử biwter trong Python, với a = 00001100, b = 00001111.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l|}
+		\hline
+		Toán tử & Ví dụ \\
+		\hline
+		| & (a | b) (00001111) \\
+		\hline
+		\& & (a \& b) (00001100) \\
+		\hline
+		\^{} & (a \^{} b) (00000010)  \\
+		\hline
+		\~{} & (\~{}a) = (00001101) \\
+		\hline
+		<< & a<<a  (49152) \\
+		\hline
+		>> & a>>a (0) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử biwter}
+\end{table}
+\newpage
+\subsection{Toán tử khai thác}
+\label{kt}
+Toán tử khai thác thường được dùng để kiểm tra xem 1 đối số có nằm trong 1 tập hợp đối số hay không. Trong Python hỗ trợ hai dạng toán tử khai thác là \texttt{in} và \texttt{not in}.\par
+Bảng dưới đây mô tả các toán tử khai thác trong Python với a = 6, b = [1, 6, 5].
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		in  & Kiểm tra đối số có nẳm trong tập hợp không & a in b (True) \\
+		\hline
+		not in & Kiểm tra đối số có nẳm ngoài tập hợp không & a not in b (False) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử khai thác}
+\end{table}
+\subsection{Toán tử xác thực}
+\label{xt}
+Toán tử xác thực dùng để kiểm hai giá trị có bằng nhau hay không. Trong Python hỗ trợ 2 dạng toán tử xác thực là \texttt{is} và \texttt{not is}.\par
+Bảng dưới đây mô tả các toán tử xác thực trong Python với a = 6, b = 7.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l||l|}
+		\hline
+		Toán tử & Mô tả & Ví dụ \\
+		\hline
+		is  & Kiểm tra toán hạng này có bằng toán hạng kia hay không & a is b (False) \\
+		\hline
+		not is & Kiểm tra toán hạng này có khác toán hạng kia hay không & a not is b (True) \\
+		\hline
+	\end{tabular}
+	\caption{Mô tả các toán tử xác thực}
+\end{table}
+\newpage
