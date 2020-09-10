@@ -22,50 +22,36 @@ Người lập trình cũng không cần khai báo kiểu dữ liệu cho biến
 \textbf{Ví dụ:} \texttt{a = 10, string = "Hello world!",...}\par
 Ngoài cách khai báo trên, người lập trình có thể khai báo và gán giá trị một lúc nhiều biến khác nhau. Các biến này có thể có cùng giá trị hoặc không.\par
 \textbf{Ví dụ:}\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{a = b = 5}\par
-	\texttt{x, y, z = 1, 2, 3 \# x = 1, y = 2, z = 3}\par
-	\texttt{\textcolor{blue}{print}(a, b)}\par
-	\texttt{\textcolor{blue}{print}(x, y, z)}\par
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\noindent
-\resetlinenumber
+\begin{lstlisting}
+a = b = 5
+x, y, z = 1, 2, 3 # x = 1, y = 2, z = 3
+print(a, b)
+print(x, y, z)
+\end{lstlisting}
 Kết quả cho ra ở Console:\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{5 5}\par
-	\texttt{1 2 3}
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\resetlinenumber
+\begin{lstlisting}
+5 5 
+1 2 3
+\end{lstlisting}
 \newpage
 \subsection{Tham chiếu đối tượng}
 Người lập trình cần phải hiểu cách trình biên dịch Python hoạt động khi khai báo biến. Quá trình xử lý này có phần khác với nhiều ngôn ngữ lập trình.\par
 Python là ngôn ngữ lập trình mang tính hướng đối tượng cao, đó là lý do mà mọi kiểu dữ liệu thuộc về một lớp cụ thể. Sử dụng từ khoá \texttt{"type"} để hiển thị kiểu dữ liệu của giá trị.\par
 \textbf{Ví dụ:}\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{\textcolor{blue}{print}(\textcolor{blue}{type}("Hello world!"))}\par
-	\texttt{\textcolor{blue}{print}(\textcolor{blue}{type}(123))}\par
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\noindent
-\resetlinenumber
+\begin{lstlisting}
+print(type("Hello world!"))
+print(type(123))
+\end{lstlisting}
 Kết quả cho ra ở Console:\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{<class 'str'>}\par
-	\texttt{<class 'int'>}
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\resetlinenumber
+\begin{lstlisting}
+<class 'str'>
+<class 'int'>
+\end{lstlisting}
 Trong Python, các biến có một tên tượng trưng tham chiếu hoặc trỏ tới một đối tượng nào đó.\par
 \textbf{Ví dụ}\\
-\rule{\linewidth}{0.2mm}\par
-	\texttt{a = 50}\\
-\rule{\linewidth}{0.2mm}\par
+\begin{lstlisting}
+a = 50
+\end{lstlisting}
 Khi khai báo \texttt{a = 50}, biến a tham chiếu tới một đối tượng số nguyên có giá trị là 50.
 \begin{figure}[h]
 	\centering
@@ -73,10 +59,10 @@ Khi khai báo \texttt{a = 50}, biến a tham chiếu tới một đối tượng
 	\caption{Mô tả tham chiếu của biến a}
 \end{figure}\par
 Khi lập trình viên gán giá trị của a cho một biến b:\\
-\rule{\linewidth}{0.2mm}\par
-\texttt{a = 50}\par
-\texttt{b = a}\\
-\rule{\linewidth}{0.2mm}\par
+\begin{lstlisting}
+a = 50
+b = a
+\end{lstlisting}
 Biến b sẽ tham chiếu tới đối tượng mà biến a đang tham chiếu tới do Python không tạo ra đối tượng mới trong trường hợp này.
 \begin{figure}[h]
 	\centering
@@ -87,26 +73,19 @@ Python thể hiện tính hiệu quả trong việc quản lý dữ liệu khi n
 \newpage
 \subsection{Danh tính đối tượng}
 Trong Python, mọi đối tượng được tạo ra đều là duy nhất. Python đảm bảo rằng không có hai đối tượng có cùng định danh. Sử dụng hàm \texttt{id()} để kiểm tra định danh của đối tượng.\par
-\textbf{Ví dụ:}\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{a = b = 1}\par
-	\texttt{c = 128}\par
-	\texttt{\textcolor{blue}{print}(\textcolor{blue}{id}(a))}\par
-	\texttt{\textcolor{blue}{print}(\textcolor{blue}{id}(b))}\par
-	\texttt{\textcolor{blue}{print}(\textcolor{blue}{id}(c))}\par
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\noindent
-\resetlinenumber
-Kết quả cho ra ở Console:\\
-\rule{\linewidth}{0.2mm}\par
-\begin{linenumbers}
-	\texttt{1824716720}\par
-	\texttt{1824716720}\par
-	\texttt{1824718752}
-\end{linenumbers}
-\rule{\linewidth}{0.2mm}\par
-\resetlinenumber
+\textbf{Ví dụ:}
+\begin{lstlisting}
+a = b = 1
+c = 128
+print(id(a))
+print(id(b))
+print(id(c))
+\end{lstlisting}
+Kết quả cho ra ở Console:
+\begin{lstlisting}
+1824716720
+1824716720
+1824718752
+\end{lstlisting}
 Biến a và b có cùng giá trị, do đó, chúng cùng tham chiếu đến một đối tượng nên có số \texttt{id()} như nhau. Biến c có giá trị khác a và b nên số \texttt{id()} cũng khác nhau.
 \newpage
